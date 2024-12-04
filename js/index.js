@@ -33,7 +33,7 @@ document.getElementById('history-btn').addEventListener('click', function () {
     historySection.classList.remove("hidden");
 
     const donationBtn = document.getElementById('donation-btn');
-    const historyBtn  = document.getElementById('history-btn');
+    const historyBtn = document.getElementById('history-btn');
 
     historyBtn.classList.add("bg-lime-300");
     historyBtn.classList.add("hover:bg-lime-400");
@@ -44,4 +44,33 @@ document.getElementById('history-btn').addEventListener('click', function () {
     donationBtn.classList.add("btn-outline");
 })
 
+// noakhali donate button function
+
+document.getElementById('noakhali-donate').addEventListener('click', function () {
+    let amountOfDonation = parseFloat(document.getElementById('noakhali-input').value);
+    let noakhaliDonation = parseFloat(document.getElementById('noakhali-donation').innerText);
+    let totalBalance = parseFloat(document.getElementById('totalBalance').innerText);
+
+    if (isNaN(amountOfDonation)) {
+        alert('Failed to add money');
+        document.getElementById("noakhali-input").value = "";
+        return;
+    }
+    if (amountOfDonation > totalBalance) {
+        alert("You don't have enough money");
+        document.getElementById('noakhali-input').value = "";
+        return;
+    }
+    if (amountOfDonation < 0) {
+        alert("Enter a valid amount");
+        document.getElementById('noakhali-input').value = "";
+        return;
+    }
+
+    noakhaliDonation += amountOfDonation;
+    document.getElementById('noakhali-donation').innerText = noakhaliDonation;
+    totalBalance -= amountOfDonation;
+    document.getElementById('totalBalance').innerText = totalBalance;
+    document.getElementById('noakhali-input').value = "";
+})
 
