@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Page</title>
+  <!-- google font cdn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Tailwind and Daisy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .font-lexend {
+      font-family: "Lexend", sans-serif;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'nav-bg': 'rgb(249, 247, 243)',
+            'btn-bg': 'rgb(180, 244, 97)',
+            'text-col': 'rgba(17, 17, 17, 0.05)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-lexend">
+  <header>
+    <div class="navbar bg-nav-bg py-6 px-10 lg:px-36 ">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            <li><a>Item 1</a></li>
+            <li>
+              <a>Parent</a>
+              <ul class="p-2">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <a id="blog-btn" class="btn w-32 bg-btn-bg btn-ghost text-xl">Blog</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <img src="images/logo.png" alt="">
+        <h2 class="ml-4 font-semibold text-xl">Donate Bangladesh</h2>
+      </div>
+      <div class="navbar-end">
+        <img src="images/coin.png" alt="">
+        <h2 class="ml-3">5500 BDT</h2>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="container border border-gray-300 rounded-2xl mx-auto mt-20  px-10 py-5 ">
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is HTML DOM?</div>
+        <div class="collapse-content">
+          <p>The HTML DOM (Document Object Model) is a programming interface for HTML and XML documents. It defines the logical structure of documents and the way they can be accessed and manipulated. It represents the webpage as a tree of nodes, where each node corresponds to an HTML element, attribute, or text.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200 my-6">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">What are the methods to access DOM elements?</div>
+        <div class="collapse-content">
+          <p>The DOM provides several methods to access and manipulate elements within a webpage. The getElementById method allows developers to select a single element using its unique id, making it ideal for pinpointing specific elements. To access multiple elements with the same tag, such as all or  tags, the getElementsByTagName method can be used. Similarly, getElementsByClassName is useful for retrieving all elements that share a particular class name. For more versatile selection, querySelector and querySelectorAll enable developers to use CSS selectors to locate elements. While querySelector fetches the first matching element, querySelectorAll retrieves all matches and returns them in a static NodeList. These methods form the foundation for accessing and interacting with elements in the DOM.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200 mb-6">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">What are events in the DOM?</div>
+        <div class="collapse-content">
+          <p>Events in the DOM are interactions or occurrences within a webpage that the browser can detect and respond to. They include actions like clicking a button, moving the mouse, typing into a text field, or submitting a form, as well as system-generated events like page loading or resizing the browser window. These events allow developers to make web pages interactive by attaching event listeners to elements. For example, a click event can trigger a function when a user clicks a button. Common types of events include mouse events (e.g., click, mouseover), keyboard events (e.g., keydown, keyup), form events (e.g., submit, focus), and window events (e.g., resize, scroll). Handling these events is essential for creating dynamic and user-friendly web applications.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">How does the DOM work?</div>
+        <div class="collapse-content">
+          <p>The DOM provides a structured representation of a document and exposes a set of methods and properties for manipulating its elements. Through scripting languages like JavaScript, developers can dynamically modify the content, structure, and style of a webpage.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/blog.js"></script>
+</body>
+
+</html>
