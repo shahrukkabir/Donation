@@ -63,36 +63,59 @@
     </div>
   </header>
   <main>
-    <section class="container border border-gray-300 rounded-2xl mx-auto mt-20  px-10 py-5 ">
-      <div class="collapse collapse-plus bg-base-200">
-        <input type="radio" name="my-accordion-3" checked="checked" />
-        <div class="collapse-title text-xl font-medium">What is HTML DOM?</div>
-        <div class="collapse-content">
-          <p>The HTML DOM (Document Object Model) is a programming interface for HTML and XML documents. It defines the logical structure of documents and the way they can be accessed and manipulated. It represents the webpage as a tree of nodes, where each node corresponds to an HTML element, attribute, or text.</p>
+    <!-- <div class="flex justify-center"> -->
+    <h2 class="text-4xl text-center font-bold mt-20">Understanding the HTML DOM</h2>
+    <!-- </div> -->
+    <div class="px-10 lg:px-36">
+      <section class="container border border-gray-500 rounded-2xl mx-auto mt-10  px-6 py-6 ">
+        <div class="collapse collapse-plus bg-base-200">
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title text-xl font-medium">What is HTML DOM?</div>
+          <div class="collapse-content">
+            <p>The HTML DOM (Document Object Model) is a programming interface for HTML and XML documents. It defines
+              the logical structure of documents and the way they can be accessed and manipulated. It represents the
+              webpage as a tree of nodes, where each node corresponds to an HTML element, attribute, or text.</p>
+          </div>
         </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-200 my-6">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title text-xl font-medium">What are the methods to access DOM elements?</div>
-        <div class="collapse-content">
-          <p>The DOM provides several methods to access and manipulate elements within a webpage. The getElementById method allows developers to select a single element using its unique id, making it ideal for pinpointing specific elements. To access multiple elements with the same tag, such as all or  tags, the getElementsByTagName method can be used. Similarly, getElementsByClassName is useful for retrieving all elements that share a particular class name. For more versatile selection, querySelector and querySelectorAll enable developers to use CSS selectors to locate elements. While querySelector fetches the first matching element, querySelectorAll retrieves all matches and returns them in a static NodeList. These methods form the foundation for accessing and interacting with elements in the DOM.</p>
+        <div class="collapse collapse-plus bg-base-200 my-6">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-xl font-medium">What are the methods to access DOM elements?</div>
+          <div class="collapse-content">
+            <p>The DOM provides several methods to access and manipulate elements within a webpage. The getElementById
+              method allows developers to select a single element using its unique id, making it ideal for pinpointing
+              specific elements. To access multiple elements with the same tag, such as all or tags, the
+              getElementsByTagName method can be used. Similarly, getElementsByClassName is useful for retrieving all
+              elements that share a particular class name. For more versatile selection, querySelector and
+              querySelectorAll enable developers to use CSS selectors to locate elements. While querySelector fetches
+              the first matching element, querySelectorAll retrieves all matches and returns them in a static NodeList.
+              These methods form the foundation for accessing and interacting with elements in the DOM.</p>
+          </div>
         </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-200 mb-6">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title text-xl font-medium">What are events in the DOM?</div>
-        <div class="collapse-content">
-          <p>Events in the DOM are interactions or occurrences within a webpage that the browser can detect and respond to. They include actions like clicking a button, moving the mouse, typing into a text field, or submitting a form, as well as system-generated events like page loading or resizing the browser window. These events allow developers to make web pages interactive by attaching event listeners to elements. For example, a click event can trigger a function when a user clicks a button. Common types of events include mouse events (e.g., click, mouseover), keyboard events (e.g., keydown, keyup), form events (e.g., submit, focus), and window events (e.g., resize, scroll). Handling these events is essential for creating dynamic and user-friendly web applications.</p>
+        <div class="collapse collapse-plus bg-base-200 mb-6">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-xl font-medium">What are events in the DOM?</div>
+          <div class="collapse-content">
+            <p>Events in the DOM are interactions or occurrences within a webpage that the browser can detect and
+              respond to. They include actions like clicking a button, moving the mouse, typing into a text field, or
+              submitting a form, as well as system-generated events like page loading or resizing the browser window.
+              These events allow developers to make web pages interactive by attaching event listeners to elements. For
+              example, a click event can trigger a function when a user clicks a button. Common types of events include
+              mouse events (e.g., click, mouseover), keyboard events (e.g., keydown, keyup), form events (e.g., submit,
+              focus), and window events (e.g., resize, scroll). Handling these events is essential for creating dynamic
+              and user-friendly web applications.</p>
+          </div>
         </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-200">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title text-xl font-medium">How does the DOM work?</div>
-        <div class="collapse-content">
-          <p>The DOM provides a structured representation of a document and exposes a set of methods and properties for manipulating its elements. Through scripting languages like JavaScript, developers can dynamically modify the content, structure, and style of a webpage.</p>
+        <div class="collapse collapse-plus bg-base-200">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title text-xl font-medium">How does the DOM work?</div>
+          <div class="collapse-content">
+            <p>The DOM provides a structured representation of a document and exposes a set of methods and properties
+              for manipulating its elements. Through scripting languages like JavaScript, developers can dynamically
+              modify the content, structure, and style of a webpage.</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
   <script src="./js/blog.js"></script>
 </body>
