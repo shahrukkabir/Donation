@@ -37,7 +37,7 @@
 
 <body class="font-lexend">
   <header>
-    <div class="navbar bg-nav-bg py-6 px-10 lg:px-36 ">
+    <div class="navbar bg-nav-bg py-6 px-10 lg:px-36 flex flex-col lg:flex-row ">
       <div class="navbar-start">
         <div class="dropdown">
           <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
@@ -52,9 +52,9 @@
             <li><a>Item 3</a></li>
           </ul>
         </div>
-        <a id="blog-btn" class="btn w-32 bg-btn-bg btn-ghost text-xl">Blog</a>
+        <a id="blog-btn" class="btn w-24 lg:w-28 bg-btn-bg btn-ghost text-xl hover:bg-lime-400">Blog</a>
       </div>
-      <div class="navbar-center hidden lg:flex">
+      <div class="navbar-center">
         <img src="images/logo.png" alt="">
         <h2 class="ml-4 font-semibold text-xl">Donate Bangladesh</h2>
       </div>
@@ -138,7 +138,8 @@
               their suffering and aiding in their recovery. Please consider making a donation to support these brave
               individuals in their time of need.
             </p>
-            <input id="quota-amount-input" type="text" class="w-full py-5 pl-5 border border-gray-500 rounded-lg" placeholder="Write Donation Amount" name="" id=""><br>
+            <input id="quota-amount-input" type="text" class="w-full py-5 pl-5 border border-gray-500 rounded-lg"
+              placeholder="Write Donation Amount" name="" id=""><br>
             <button id="quota-protest-donate" class="bg-btn-bg w-full mt-7 rounded-lg py-4 px-8">Donate Now</button>
           </div>
         </div>
