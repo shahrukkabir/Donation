@@ -72,6 +72,8 @@ document.getElementById('noakhali-donate').addEventListener('click', function ()
     totalBalance -= amountOfDonation;
     document.getElementById('totalBalance').innerText = totalBalance;
     document.getElementById('noakhali-input').value = "";
+    // added transaction to history
+    addHistory(amountOfDonation, "Flood at Noakhali, Bangladesh");
 })
 
 // feni donate button function 
@@ -94,14 +96,17 @@ document.getElementById('feni-donate').addEventListener('click', function () {
     }
     if (amountOfDonation < 0) {
         alert("Please enter valid amount");
-        
+
         return;
     }
-    feniDonation+=amountOfDonation;
+    feniDonation += amountOfDonation;
     document.getElementById('feni-donation').innerText = feniDonation;
-    totalBalance-=amountOfDonation;
+    totalBalance -= amountOfDonation;
     document.getElementById('totalBalance').innerText = totalBalance;
     document.getElementById('feni-input').value = "";
+
+    // added transaction to history
+    addHistory(amountOfDonation, "Flood at Feni, Bangladesh");
 })
 
 
@@ -125,12 +130,31 @@ document.getElementById('quota-protest-donate').addEventListener('click', functi
     }
     if (amountOfDonation < 0) {
         alert("Please enter valid amount");
-        
+
         return;
     }
-    quotaDonation+=amountOfDonation;
+    quotaDonation += amountOfDonation;
     document.getElementById('quota-injured-donation').innerText = quotaDonation;
-    totalBalance-=amountOfDonation;
+    totalBalance -= amountOfDonation;
     document.getElementById('totalBalance').innerText = totalBalance;
     document.getElementById('quota-amount-input').value = "";
+
+    // added transaction to history
+    addHistory(amountOfDonation, "Injured in the Quota Movement");
 })
+
+// history section 
+
+function addHistory(amount, title) {
+    const historySection = document.getElementById("history-section");
+    historySection.innerHTML +=
+        `   <div class=" border-2 p-3  rounded-md my-5">
+                <h1>${amount} Taka is Donated for ${title} </h1>
+                <p class="text-sm text-blue-600">Date : ${getCurrentFormattedDate()} </p>
+            </div>     `;
+}
+
+function getCurrentFormattedDate() {
+    const now = new Date();
+    return now.toString();
+}
