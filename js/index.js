@@ -52,8 +52,8 @@ document.getElementById('noakhali-donate').addEventListener('click', function ()
     let totalBalance = parseFloat(document.getElementById('totalBalance').innerText);
 
     if (isNaN(amountOfDonation)) {
-        alert('Failed to add money');
-        document.getElementById("noakhali-input").value = "";
+        alert('Please enter valid amount');
+        document.getElementById('noakhali-input').value = "";
         return;
     }
     if (amountOfDonation > totalBalance) {
@@ -62,7 +62,7 @@ document.getElementById('noakhali-donate').addEventListener('click', function ()
         return;
     }
     if (amountOfDonation < 0) {
-        alert("Enter a valid amount");
+        alert("Please enter valid amount");
         document.getElementById('noakhali-input').value = "";
         return;
     }
@@ -74,3 +74,63 @@ document.getElementById('noakhali-donate').addEventListener('click', function ()
     document.getElementById('noakhali-input').value = "";
 })
 
+// feni donate button function 
+
+document.getElementById('feni-donate').addEventListener('click', function () {
+    console.log("button click");
+    let amountOfDonation = parseFloat(document.getElementById('feni-input').value);
+    let feniDonation = parseFloat(document.getElementById('feni-donation').innerText);
+    let totalBalance = parseFloat(document.getElementById('totalBalance').innerText);
+
+    if (isNaN(amountOfDonation)) {
+        alert('Please enter valid amount');
+        document.getElementById('feni-input').value = "";
+        return;
+    }
+    if (amountOfDonation > totalBalance) {
+        alert("You don't have enough money");
+        document.getElementById('feni-input').value = "";
+        return;
+    }
+    if (amountOfDonation < 0) {
+        alert("Please enter valid amount");
+        
+        return;
+    }
+    feniDonation+=amountOfDonation;
+    document.getElementById('feni-donation').innerText = feniDonation;
+    totalBalance-=amountOfDonation;
+    document.getElementById('totalBalance').innerText = totalBalance;
+    document.getElementById('feni-input').value = "";
+})
+
+
+// quota protest button function
+
+document.getElementById('quota-protest-donate').addEventListener('click', function () {
+    console.log("button click");
+    let amountOfDonation = parseFloat(document.getElementById('quota-amount-input').value);
+    let quotaDonation = parseFloat(document.getElementById('quota-injured-donation').innerText);
+    let totalBalance = parseFloat(document.getElementById('totalBalance').innerText);
+
+    if (isNaN(amountOfDonation)) {
+        alert('Please enter valid amount');
+        document.getElementById('quota-amount-input').value = "";
+        return;
+    }
+    if (amountOfDonation > totalBalance) {
+        alert("You don't have enough money");
+        document.getElementById('feni-input').value = "";
+        return;
+    }
+    if (amountOfDonation < 0) {
+        alert("Please enter valid amount");
+        
+        return;
+    }
+    quotaDonation+=amountOfDonation;
+    document.getElementById('quota-injured-donation').innerText = quotaDonation;
+    totalBalance-=amountOfDonation;
+    document.getElementById('totalBalance').innerText = totalBalance;
+    document.getElementById('quota-amount-input').value = "";
+})
