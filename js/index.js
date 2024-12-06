@@ -3,7 +3,6 @@ document.getElementById('blog-btn').addEventListener('click', function () {
 })
 
 // donation btn function
-
 document.getElementById('donation-btn').addEventListener('click', function () {
     const donationSection = document.getElementById('donation-section');
     donationSection.classList.remove("hidden");
@@ -16,14 +15,14 @@ document.getElementById('donation-btn').addEventListener('click', function () {
 
     donationBtn.classList.add("bg-lime-300");
     donationBtn.classList.add("hover:bg-lime-400");
+    donationBtn.classList.remove("btn-outline");
 
     historyBtn.classList.remove("bg-lime-300");
     historyBtn.classList.remove("hover:bg-lime-400");
-    historyBtn.classList.add("btn-ghost");
+    historyBtn.classList.add("btn-outline");
 })
 
 // history btn function
-
 document.getElementById('history-btn').addEventListener('click', function () {
     const donationSection = document.getElementById('donation-section');
     donationSection.classList.add("hidden");
@@ -36,14 +35,14 @@ document.getElementById('history-btn').addEventListener('click', function () {
 
     historyBtn.classList.add("bg-lime-300");
     historyBtn.classList.add("hover:bg-lime-400");
+    historyBtn.classList.remove("btn-outline");
 
     donationBtn.classList.remove("bg-lime-300");
     donationBtn.classList.remove("hover:bg-lime-400");
-    donationBtn.classList.add("btn-ghost");
+    donationBtn.classList.add("btn-outline");
 })
 
 // noakhali donate button function
-
 document.getElementById('noakhali-donate').addEventListener('click', function () {
     let amountOfDonation = parseFloat(document.getElementById('noakhali-input').value);
     let noakhaliDonation = parseFloat(document.getElementById('noakhali-donation').innerText);
@@ -77,7 +76,6 @@ document.getElementById('noakhali-donate').addEventListener('click', function ()
 })
 
 // feni donate button function 
-
 document.getElementById('feni-donate').addEventListener('click', function () {
     console.log("button click");
     let amountOfDonation = parseFloat(document.getElementById('feni-input').value);
@@ -110,9 +108,7 @@ document.getElementById('feni-donate').addEventListener('click', function () {
     addHistory(amountOfDonation, "Flood at Feni, Bangladesh");
 })
 
-
 // quota protest button function
-
 document.getElementById('quota-protest-donate').addEventListener('click', function () {
     console.log("button click");
     let amountOfDonation = parseFloat(document.getElementById('quota-amount-input').value);
@@ -146,7 +142,6 @@ document.getElementById('quota-protest-donate').addEventListener('click', functi
 })
 
 // history section 
-
 function addHistory(amount, title) {
     const historySection = document.getElementById("history-section");
     historySection.innerHTML +=
