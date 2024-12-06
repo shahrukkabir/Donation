@@ -70,6 +70,8 @@ document.getElementById('noakhali-donate').addEventListener('click', function ()
     totalBalance -= amountOfDonation;
     document.getElementById('totalBalance').innerText = totalBalance;
     document.getElementById('noakhali-input').value = "";
+    //show modal
+    showModal();
     // added transaction to history
     addHistory(amountOfDonation, "Flood at Noakhali, Bangladesh");
 })
@@ -102,7 +104,8 @@ document.getElementById('feni-donate').addEventListener('click', function () {
     totalBalance -= amountOfDonation;
     document.getElementById('totalBalance').innerText = totalBalance;
     document.getElementById('feni-input').value = "";
-
+    //show modal
+    showModal();
     // added transaction to history
     addHistory(amountOfDonation, "Flood at Feni, Bangladesh");
 })
@@ -136,7 +139,8 @@ document.getElementById('quota-protest-donate').addEventListener('click', functi
     totalBalance -= amountOfDonation;
     document.getElementById('totalBalance').innerText = totalBalance;
     document.getElementById('quota-amount-input').value = "";
-
+    //show modal
+    showModal();
     // added transaction to history
     addHistory(amountOfDonation, "Injured in the Quota Movement");
 })
@@ -156,3 +160,11 @@ function getCurrentFormattedDate() {
     const now = new Date();
     return now.toString();
 }
+
+function showModal(){
+    document.getElementById('modal-section').classList.remove("hidden");
+}
+
+document.getElementById('modal-close-btn').addEventListener('click',function(){
+    document.getElementById('modal-section').classList.add("hidden");
+})
