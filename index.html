@@ -36,40 +36,29 @@
 </head>
 
 <body class="font-lexend">
-  <header>
-    <div class="navbar bg-nav-bg py-6 px-10 lg:px-36 flex flex-col lg:flex-row ">
+  <header class="fixed top-0 w-full bg-white shadow-lg">
+    <!-- nav section -->
+    <div class="navbar bg-nav-bg py-6 px-8 lg:px-36 flex flex-col lg:flex-row">
       <div class="navbar-start">
-        <div class="dropdown">
-          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li><a>Item 1</a></li>
-            <li>
-              <a>Parent</a>
-              <ul class="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-              </ul>
-            </li>
-            <li><a>Item 3</a></li>
-          </ul>
-        </div>
-        <a id="blog-btn" class="btn w-24 lg:w-28 bg-btn-bg btn-ghost text-xl hover:bg-lime-400">Blog</a>
+        <a id="blog-btn" class="btn w-24 ml-10 lg:ml-0 lg:w-28 bg-btn-bg btn-ghost text-xs lg:text-xl hover:bg-lime-400">Blog</a>
       </div>
-      <div class="navbar-center">
-        <img src="images/logo.png" alt="">
-        <h2 class="ml-4 font-semibold text-xl">Donate Bangladesh</h2>
+      <div class="navbar-center my-3 lg:my-0">
+        <img class="w-12" src="images/logo.png" alt="">
+        <h2 class="ml-4 font-extrabold lg:font-semibold text-xl">Donate Bangladesh</h2>
       </div>
-      <div class="navbar-end">
+      <div class="navbar-end mr-10 lg:mr-0">
         <img src="images/coin.png" alt="">
         <h2 id="totalBalance" class="ml-3">5500 BDT</h2>
       </div>
     </div>
+    <!-- button section -->
+    <div class="flex justify-center gap-5 my-5">
+      <button id="donation-btn" class="btn font-bold px-6 bg-lime-300 hover:bg-lime-400"> Donation </button>
+      <button id="history-btn" class="btn font-bold px-6 btn-ghost"> History </button>
+    </div>
   </header>
   <main>
-    <section class="container  mx-auto mt-20 px-4  lg:px-36">
-      <div class="flex justify-center gap-5">
-        <button id="donation-btn" class="btn font-bold px-6 bg-lime-300 hover:bg-lime-400"> Donation </button>
-        <button id="history-btn" class="btn font-bold px-6 btn-outline"> History </button>
-      </div>
+    <section class="container mx-auto mt-80 lg:mt-60 px-4  lg:px-36">
       <!-- donation section -->
       <div id="donation-section">
         <!-- card-1 -->

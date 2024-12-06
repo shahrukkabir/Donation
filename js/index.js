@@ -16,11 +16,10 @@ document.getElementById('donation-btn').addEventListener('click', function () {
 
     donationBtn.classList.add("bg-lime-300");
     donationBtn.classList.add("hover:bg-lime-400");
-    donationBtn.classList.remove("btn-outline");
 
     historyBtn.classList.remove("bg-lime-300");
     historyBtn.classList.remove("hover:bg-lime-400");
-    historyBtn.classList.add("btn-outline");
+    historyBtn.classList.add("btn-ghost");
 })
 
 // history btn function
@@ -37,11 +36,10 @@ document.getElementById('history-btn').addEventListener('click', function () {
 
     historyBtn.classList.add("bg-lime-300");
     historyBtn.classList.add("hover:bg-lime-400");
-    historyBtn.classList.remove("btn-outline");
 
     donationBtn.classList.remove("bg-lime-300");
     donationBtn.classList.remove("hover:bg-lime-400");
-    donationBtn.classList.add("btn-outline");
+    donationBtn.classList.add("btn-ghost");
 })
 
 // noakhali donate button function
